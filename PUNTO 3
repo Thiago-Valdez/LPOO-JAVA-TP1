@@ -1,0 +1,38 @@
+package martin;
+import java.util.Scanner;
+
+
+public class Punto3 {
+	public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        boolean encontrado = false;
+        int numero;
+
+        while (!encontrado) {
+            System.out.print("Ingrese un número: ");
+            numero = scanner.nextInt();
+
+            if (numero > 100 && esPrimo(numero)) {
+                encontrado = true;
+                System.out.println("El número " + numero + " es primo y mayor que 100.");
+            } else {
+                System.out.println("El número ingresado no cumple con las condiciones.");
+            }
+        }
+
+        scanner.close();
+    }
+
+    public static boolean esPrimo(int n) {
+        if (n <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }

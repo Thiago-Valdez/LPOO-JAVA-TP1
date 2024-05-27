@@ -1,0 +1,32 @@
+package martin;
+
+public class Punto4 {
+	
+	    public static void main(String[] args) {
+	        // Declaramos un array de strings
+	        String[] nombres = {"Juan", "María", "Pedro", "Luisa", "Carlos"};
+
+	        // Iteramos sobre el array utilizando for-each
+	        for (String nombre : nombres) {
+	            // Imprimimos el nombre en mayúsculas
+	            System.out.println(nombre.toUpperCase());
+	        }
+
+	        System.out.println("\nLongitudes de los nombres:");
+
+	        // Iteramos nuevamente sobre el array utilizando for-each
+	        for (String nombre : nombres) {
+	            // Imprimimos la longitud de cada nombre
+	            System.out.println(nombre + ": " + nombre.length());
+	        }
+	    }
+	}
+
+
+/* El bucle for-each es particularmente útil cuando se trabaja con colecciones de datos, 
+ * ya que simplifica la sintaxis y evita errores comunes como el desbordamiento de índices. 
+ * Además, el código resultante es más legible y fácil de mantener.
+ * Es importante tener en cuenta que, aunque el bucle for-each facilita la iteración, 
+ * no proporciona un mecanismo directo para modificar los elementos de la colección sobre la cual se itera. 
+ * Si se necesita modificar los elementos, se debe utilizar un bucle for tradicional o métodos específicos de la colección en cuestión.
+ */
